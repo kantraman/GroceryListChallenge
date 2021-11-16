@@ -11,7 +11,7 @@
 </head>
 <body>
     <h1 class="text-center mt-4">Grocery List</h1>
-    <p id="container" class="container mx-auto p-3 "><div class="text-center"><button onclick="loadContent();" class="btn btn-primary">Load Content</button></div></p>
+    <p id="container" class="container mx-auto p-3 "><div class="text-center"><button id="loader" onclick="loadContent();" class="btn btn-primary">Load Content</button></div></p>
     
     <script>
         function loadContent(){
@@ -39,7 +39,8 @@
                                                     });
                                             strOutput += "</tbody></table>"  
                                             strOutput += "<span class='text-danger fst-italic'>Click row to strike off.</span>"      
-                                            document.getElementById("container").innerHTML = strOutput;
+                                            document.querySelector("#container").innerHTML = strOutput;
+                                            document.querySelector("#loader").setAttribute("disabled", "true");
                                         }
                                     }
                                     xhr.open('GET', 'groceryList.json', true);
