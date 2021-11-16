@@ -1,0 +1,123 @@
+
+    [
+        {
+            "SerialNo":1,
+            "Name":"Carrot",
+            "Quantity":1,
+            "Unit":"Kg",
+            "Department":"Vegetables",
+            "Notes":"Should be fresh"
+        },
+        {
+            "SerialNo":2,
+            "Name":"Onion",
+            "Quantity":2,
+            "Unit":"Kg",
+            "Department":"Vegetables",
+            "Notes":"Should be fresh"
+        },
+        {
+            "SerialNo":3,
+            "Name":"Potato",
+            "Quantity":2.5,
+            "Unit":"Kg",
+            "Department":"Vegetables",
+            "Notes":"Should be fresh"
+        },
+        {
+            "SerialNo":4,
+            "Name":"Red Chillies",
+            "Quantity":200,
+            "Unit":"g",
+            "Department":"Vegetables",
+            "Notes":"Should be fresh"
+        },
+        {
+            "SerialNo":5,
+            "Name":"Milk",
+            "Quantity":2,
+            "Unit":"Litre",
+            "Department":"Meat & Dairy",
+            "Notes":"Amul"
+        },
+        {
+            "SerialNo":6,
+            "Name":"Eggs",
+            "Quantity":12,
+            "Unit":"Nos",
+            "Department":"Meat & Dairy",
+            "Notes":"Should be fresh"
+        },
+        {
+            "SerialNo":7,
+            "Name":"Chicken",
+            "Quantity":1.5,
+            "Unit":"Kg",
+            "Department":"Meat & Dairy",
+            "Notes":"Well cleaned without liver"
+        },
+        {
+            "SerialNo":8,
+            "Name":"Butter",
+            "Quantity":250,
+            "Unit":"g",
+            "Department":"Meat & Dairy",
+            "Notes":"Amul is preferred"
+        },
+        {
+            "SerialNo":9,
+            "Name":"Tea",
+            "Quantity":250,
+            "Unit":"g",
+            "Department":"Beverages",
+            "Notes":"Taj Mahal"
+        },
+        {
+            "SerialNo":10,
+            "Name":"Rice",
+            "Quantity":10,
+            "Unit":"Kg",
+            "Department":"Cereals",
+            "Notes":"Pavizham double boiled"
+        },
+        {
+            "SerialNo":11,
+            "Name":"Sugar",
+            "Quantity":5,
+            "Unit":"Kg",
+            "Department":"General",
+            "Notes":"Packet is preffered"
+        },
+        {
+            "SerialNo":12,
+            "Name":"Bread",
+            "Quantity":1,
+            "Unit":"Packet",
+            "Department":"Bakery",
+            "Notes":"Elite or Modern"
+        },
+        {
+            "SerialNo":13,
+            "Name":"Turmeric Powder",
+            "Quantity":1,
+            "Unit":"Packet",
+            "Department":"General",
+            "Notes":"Eastern or Brahmins"
+        },
+        {
+            "SerialNo":14,
+            "Name":"Sunflower oil",
+            "Quantity":1,
+            "Unit":"Litre",
+            "Department":"General",
+            "Notes":"Gold winner"
+        },
+        {
+            "SerialNo":15,
+            "Name":"Tomato Sauce",
+            "Quantity":150,
+            "Unit":"ml",
+            "Department":"General",
+            "Notes":"Kissan or Happy"
+        }
+    ]

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grocery List</title>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body>
+    <h1 class="text-center mt-4">Grocery List</h1>
+    <p id="container" class="container mx-auto p-3 "><div class="text-center"><button onclick="loadContent();" class="btn btn-primary">Load Content</button></div></p>
+    
+    <script>
+        function loadContent(){
+            var xhr = new XMLHttpRequest();
+            xhr.onreadystatechange = function () {
+                                        if(this.readyState == 4 && this.status == 200){
+                                            var arrResponse = JSON.parse(this.responseText);
+                                            var strOutput = "";
+                                            strOutput += "<span class='text-danger fst-italic'>Click row to strike off.</span>"
+                                            strOutput += "<table class='table table-hover table-bordered'>";
+                                            strOutput += "<thead><th class='text-end bg-primary bg-gradient text-white'>Sl. No</th>";
+                                            strOutput += "<th class='bg-primary bg-gradient text-white'>Name</th>";
+                                            strOutput += "<th class='text-end bg-primary bg-gradient text-white'>Quantity</th>";
+                                            strOutput += "<th class='bg-primary bg-gradient text-white'>Unit</th>";
+                                            strOutput += "<th class='bg-primary bg-gradient text-white'>Department</th>";
+                                            strOutput += "<th class='bg-primary bg-gradient text-white'>Notes</th></thead>";
+                                            strOutput += "<tbody style='background-color:#f9f9cc;border: 1px solid #c9c999;'>"
+                                            arrResponse.forEach(item => {
+                                                    strOutput += `<tr style='cursor: pointer;' onclick='chkItem(this)'><td class='text-end'> ${item.SerialNo} </td>`;
+                                                    strOutput += `<td> ${item.Name} </td>`;
+                                                    strOutput += `<td class='text-end'> ${item.Quantity} </td>`;
+                                                    strOutput += `<td> ${item.Unit} </td>`;
+                                                    strOutput += `<td> ${item.Department} </td>`;
+                                                    strOutput += `<td> ${item.Notes} </td></tr>`;
+                                                    });
+                                            strOutput += "</tbody></table>"  
+                                            strOutput += "<span class='text-danger fst-italic'>Click row to strike off.</span>"      
+                                            document.getElementById("container").innerHTML = strOutput;
+                                        }
+                                    }
+                                    xhr.open('GET', 'groceryList.json', true);
+                                    xhr.send();                                       
+                                }
+        function chkItem(obj) {
+            if(obj.style.textDecoration == ""){
+                obj.style.textDecoration = "line-through";
+                obj.style.color = "red";
+            }else{
+                obj.style.textDecoration = "";
+                obj.style.color = "black";
+            } 
+        }                       
+    </script>
+</body>
+</html>
